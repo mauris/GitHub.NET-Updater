@@ -20,7 +20,7 @@ namespace Github.Updater
 
         public Version(string version)
         {
-            Match match = Regex.Match(version, "/^([0-9]+)\\.([0-9]+)\\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?(?:\\+[0-9A-Za-z-]+)?$/");
+            Match match = Regex.Match(version, @"^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\\+[0-9A-Za-z-]+)?$");
             
         }
     }
