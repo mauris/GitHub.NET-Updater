@@ -26,5 +26,12 @@ namespace UnitTester
             Assert.AreEqual(version.Patch, 14665);
             Assert.AreEqual(version.Tag, "alpha2-abc123f0");
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(System.InvalidOperationException))]
+        public void TestVersion3()
+        {
+            UpdaterVersion version = new UpdaterVersion("fail");
+        }
     }
 }
